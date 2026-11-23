@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matematică · Titularizare &amp; Definitivat | Prof. Roșca Bogdan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
+
+  <!-- TOP BAR -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+      <a href="#top" class="flex items-center gap-3 min-w-0">
+        <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white font-extrabold flex items-center justify-center shadow-sm shrink-0">
+          ∑
+        </div>
+        <div class="truncate">
+          <div class="font-extrabold text-slate-900 dark:text-white text-sm sm:text-base truncate">
+            Matematică · Prof. Roșca Bogdan
+          </div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 truncate">
+            Titularizare &amp; Definitivat Învățători · Materiale &amp; Cursuri
+          </div>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <button onclick="copyPhone()" class="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-sm transition">
+          <span>📞 0771250671</span>
+          <span id="copyBadge" class="hidden sm:inline text-[11px] bg-emerald-800/60 px-2 py-0.5 rounded-md">Copiază</span>
+        </button>
+
+        <button id="themeToggle" onclick="toggleTheme()" aria-label="Schimbă tema" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition text-sm">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- QUICK NAV -->
+    <nav class="bg-slate-100/80 dark:bg-slate-900/80 border-t border-slate-200/70 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center gap-2 overflow-x-auto no-scrollbar py-2 text-xs sm:text-sm font-semibold">
+        <a href="#cursuri" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-indigo-700 dark:text-indigo-300 shadow-sm whitespace-nowrap hover:bg-indigo-50 dark:hover:bg-slate-700 transition">1. Cursuri Online</a>
+        <a href="#prezentari" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap hover:bg-indigo-50 dark:hover:bg-slate-700 transition">2. Catalog Prezentări PPT (3€)</a>
+        <a href="#culegeri" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap hover:bg-indigo-50 dark:hover:bg-slate-700 transition">3. Culegeri (150 lei)</a>
+        <a href="#cursanti" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap hover:bg-indigo-50 dark:hover:bg-slate-700 transition">4. Cursanți &amp; Înscriere</a>
+        <a href="#gratuit" class="px-3 py-1.5 rounded-lg bg-amber-500/15 text-amber-800 dark:text-amber-300 border border-amber-400/40 whitespace-nowrap hover:bg-amber-500/25 transition">5. Sesiune Gratuită</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-16">
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-900 via-indigo-800 to-slate-900 text-white p-6 sm:p-10 lg:p-12 shadow-xl">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs sm:text-sm font-semibold text-indigo-100">
+            <span>🎓 Pregătire Examen Național · Învățători</span>
+          </div>
+          <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+            Matematică explicată clar, pas cu pas, pentru <span class="text-amber-300">Titularizare</span> și <span class="text-emerald-300">Definitivat</span>
+          </h1>
+          <p class="text-slate-200 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl">
+            Cursuri online interactive pe Zoom, 21 de prezentări PowerPoint structurate pe capitolele programei, culegeri tipărite cu teorie și probleme rezolvate complet, plus acces organizat pe Google Classroom.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href="#cursanti" class="px-5 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-extrabold text-sm sm:text-base shadow-lg transition">
+              Înscrie-te la cursuri / Comandă materiale
+            </a>
+            <a href="#prezentari" class="px-5 py-3 rounded-xl bg-white/15 hover:bg-white/25 border border-white/25 text-white font-bold text-sm sm:text-base transition">
+              Explorează cele 21 de prezentări PPT
+            </a>
+          </div>
+          <div class="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm text-indigo-200">
+            <span>✅ Fără metodica predării (strict Matematică)</span>
+            <span>✅ Metode figurative &amp; algebrice</span>
+            <span>✅ Relații și detalii: <strong>Prof. Roșca Bogdan · 0771250671</strong></span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 space-y-4">
+            <h2 class="font-extrabold text-lg text-amber-300">📌 Structura pachetului de pregătire</h2>
+            <ul class="space-y-3 text-sm text-slate-100">
+              <li class="flex items-start gap-3">
+                <span class="px-2 py-0.5 rounded bg-indigo-500/40 font-bold text-xs mt-0.5">LIVE</span>
+                <span><strong>Ședințe online săptămânale (Zoom Pro):</strong> explicații pe tablă grafică, lucru interactiv și înregistrări disponibile pentru recapitulare.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="px-2 py-0.5 rounded bg-emerald-500/40 font-bold text-xs mt-0.5">PPT</span>
+                <span><strong>21 Prezentări PowerPoint (3€ / bucată):</strong> teorie sintetizată, scheme logice și probleme model pe fiecare temă din programă.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="px-2 py-0.5 rounded bg-amber-500/40 font-bold text-xs mt-0.5">CĂRȚI</span>
+                <span><strong>Culegeri tipărite (150 lei / volum):</strong> teorie, exemple și teste complete cu rezolvări detaliate (fără grile, fără metodică).</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="px-2 py-0.5 rounded bg-sky-500/40 font-bold text-xs mt-0.5">SUPORT</span>
+                <span><strong>Grup WhatsApp &amp; Google Classroom:</strong> teme verificate, fișe PDF suplimentare și răspunsuri rapide la întrebări.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: CURSURI ONLINE -->
+    <section id="cursuri" class="scroll-mt-28 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Secțiunea 1 · Pregătire asistată</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Cursuri Online de Matematică</h2>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 max-w-md">
+          Grupe organizate pe nivel de pornire, cu accent pe înțelegerea logică a rezolvărilor și redactarea corectă pentru barem.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300">
+              Modul 1 · Fundamente &amp; Aritmetică
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">Metode Aritmetice &amp; Numere</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Parcurgem temeinic metodele specifice (figurativă, comparației, mersului invers, falsei ipoteze), divizibilitatea, fracțiile și unitățile de măsură.
+            </p>
+            <ul class="text-xs sm:text-sm space-y-1.5 text-slate-700 dark:text-slate-300 pt-2">
+              <li>• Explicații pas cu pas pe tablă digitală</li>
+              <li>• Fișe de lucru după fiecare ședință</li>
+              <li>• Modele de redactare conform baremului</li>
+            </ul>
+          </div>
+          <a href="#cursanti" onclick="prefillSubject('Înscriere Curs Online - Modul Aritmetică')" class="w-full text-center py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm transition">
+            Solicită loc în grupă
+          </a>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-900 border-2 border-indigo-600 p-6 shadow-md flex flex-col justify-between space-y-5 relative">
+          <span class="absolute -top-3 right-5 px-3 py-0.5 rounded-full bg-indigo-600 text-white text-xs font-extrabold">
+            Cel mai solicitat
+          </span>
+          <div class="space-y-3">
+            <div class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">
+              Pregătire Completă · Programă Integrală
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">Aritmetică, Algebră &amp; Geometrie</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Pregătire completă de la zero până la nivel de examen: ecuații, inecuații, funcții, geometrie plană și în spațiu, plus simulări cronometrate.
+            </p>
+            <ul class="text-xs sm:text-sm space-y-1.5 text-slate-700 dark:text-slate-300 pt-2">
+              <li>• Acces în Google Classroom + grup WhatsApp</li>
+              <li>• Rezolvări duble (figurativ + algebric)</li>
+              <li>• Simulări lunare cu feedback individual</li>
+            </ul>
+          </div>
+          <a href="#cursanti" onclick="prefillSubject('Înscriere Curs Complet Titularizare / Definitivat')" class="w-full text-center py-2.5 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm transition">
+            Mă înscriu la pregătirea completă
+          </a>
+        </div>
+
+        <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 shadow-sm flex flex-col justify-between space-y-5">
+          <div class="space-y-3">
+            <div class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-800 dark:bg-amber-900/50 dark:text-amber-300">
+              Modul Intensiv · Variante &amp; Teste
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">Rezolvări Subiecte &amp; Recapitulare</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              Lucru intensiv pe subiecte date la examenele anterioare (2021–2026) și variante originale concepute după structura oficială.
+            </p>
+            <ul class="text-xs sm:text-sm space-y-1.5 text-slate-700 dark:text-slate-300 pt-2">
+              <li>• Identificarea capcanelor frecvente din enunț</li>
+              <li>• Optimizarea timpului de lucru în examen</li>
+              <li>• Clarificarea punctajelor intermediare</li>
+            </ul>
+          </div>
+          <a href="#cursanti" onclick="prefillSubject('Înscriere Modul Intensiv Variante Examen')" class="w-full text-center py-2.5 px-4 rounded-xl bg-slate-800 hover:bg-slate-900 dark:bg-slate-700 dark:hover:bg-slate-600 text-white font-bold text-sm transition">
+            Rezervă loc la intensiv
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CATALOG 21 PREZENTĂRI PPT -->
+    <section id="prezentari" class="scroll-mt-28 space-y-6">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Secțiunea 2 · Resurse digitale editabile / vizuale</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Catalog Prezentări PowerPoint (21 teme · 3€ / prezentare)</h2>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+          <input
+            id="pptSearch"
+            type="text"
+            placeholder="Caută temă (ex: fracții, triunghi, ecuații)..."
+            oninput="renderPresentations()"
+            class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm w-full sm:w-72 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <select
+            id="pptFilter"
+            onchange="renderPresentations()"
+            class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          >
+            <option value="all">Toate categoriile (21)</option>
+            <option value="aritmetica">Aritmetică (9)</option>
+            <option value="algebra">Algebră (6)</option>
+            <option value="geometrie">Geometrie (6)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="rounded-2xl bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-900/60 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-sm">
+        <div>
+          <strong>Pachet promoțional:</strong> Poți comanda prezentările individual (<strong>3€ / prezentare</strong>) sau întregul set de <strong>21 prezentări PPT</strong> cu reducere pentru pregătire completă.
+        </div>
+        <button onclick="orderAllPpts()" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm whitespace-nowrap transition">
+          Comandă tot setul (21 PPT)
+        </button>
+      </div>
+
+      <div id="pptGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <!-- SECTION 3: CULEGERI -->
+    <section id="culegeri" class="scroll-mt-28 space-y-6">
+      <div>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Secțiunea 3 · Lucrări tipărite · Autor Prof. Roșca Bogdan</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Culegeri de Matematică pentru Titularizare Învățători (150 lei / volum)</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+          Materiale concepute riguros pentru examenul de titularizare (disciplina Matematică, fără metodică, fără teste grilă — exclusiv teorie, exerciții și probleme rezolvate).
+        </p>
+      </div>
+
+      <div id="booksGrid" class="grid md:grid-cols-2 gap-8"></div>
+    </section>
+
+    <!-- SECTION 4: CURSANȚI & ÎNSCRIERE -->
+    <section id="cursanti" class="scroll-mt-28 space-y-6">
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-5 space-y-5">
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Secțiunea 4 · Contact &amp; Comenzi</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1">Înscriere Cursanți &amp; Comandă Materiale</h2>
+            <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed">
+              Completează formularul alăturat pentru a trimite rapid solicitarea ta direct pe WhatsApp către <strong>Prof. Roșca Bogdan</strong> sau sună la <strong>0771250671</strong>.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 space-y-4 shadow-sm">
+            <h3 class="font-extrabold text-base text-slate-900 dark:text-white">Cum decurge colaborarea:</h3>
+            <ol class="space-y-2.5 text-sm text-slate-700 dark:text-slate-300 list-decimal list-inside">
+              <li>Alegi cursul online, prezentările PPT sau culegerile dorite.</li>
+              <li>Primești confirmarea și detaliile de acces (Zoom, Google Classroom, WhatsApp) sau expediere prin curier.</li>
+              <li>Lucrăm organizat, pe baza planificării săptămânale până la examen.</li>
+            </ol>
+            <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-sm">
+              <span class="font-semibold text-slate-500 dark:text-slate-400">Telefon / WhatsApp:</span>
+              <a href="tel:0771250671" class="font-extrabold text-emerald-600 dark:text-emerald-400 text-base">0771250671</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <form onsubmit="submitEnrollment(event)" class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-sm space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1.5">Nume și prenume *</label>
+                <input id="studentName" type="text" required placeholder="Ex: Popescu Maria" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1.5">Telefon (WhatsApp) *</label>
+                <input id="studentPhone" type="tel" required placeholder="Ex: 07xx xxx xxx" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1.5">Examen vizat</label>
+                <select id="studentExam" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                  <option value="Titularizare Învățători">Titularizare Învățători</option>
+                  <option value="Definitivat Învățători">Definitivat Învățători</option>
+                  <option value="Ambele examene">Titularizare + Definitivat</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1.5">Ce dorești să soliciți *</label>
+                <input id="studentInterest" type="text" required placeholder="Ex: Curs complet / Culegere Algebră / Prezentări PPT" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase text-slate-500 dark:text-slate-400 mb-1.5">Mesaj sau detalii suplimentare (opțional)</label>
+              <textarea id="studentNotes" rows="3" placeholder="Ex: Doresc livrare prin curier în localitatea..., sau prefer ședințele de seară." class="w-full px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+              <button type="submit" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm shadow-md transition">
+                Trimite solicitarea pe WhatsApp →
+              </button>
+              <span class="text-xs text-slate-500 dark:text-slate-400">Răspuns direct de la Prof. Roșca Bogdan (0771250671)</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: SESIUNE GRATUITĂ -->
+    <section id="gratuit" class="scroll-mt-28">
+      <div class="rounded-3xl bg-gradient-to-r from-amber-500/15 via-indigo-500/10 to-emerald-500/15 border border-amber-400/40 dark:border-amber-500/30 p-6 sm:p-10">
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div class="space-y-3 max-w-2xl">
+            <span class="inline-block px-3 py-1 rounded-full bg-amber-500 text-slate-950 font-extrabold text-xs">
+              🎁 Sesiune Demonstrativă &amp; Resurse Gratuite
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+              Participă gratuit la o ședință introductivă de Matematică
+            </h2>
+            <p class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+              Vrei să vezi exact cum sunt structurate explicațiile înainte de a te înscrie? Solicită linkul de acces pentru următoarea sesiune gratuită pe Zoom și primești o fișă model rezolvată.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+            <button onclick="requestFreeSession()" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-amber-400 dark:hover:bg-amber-300 text-white dark:text-slate-950 font-extrabold text-sm shadow-md transition">
+              Cere linkul sesiunii gratuite (WhatsApp)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600 dark:text-slate-400">
+      <div>
+        <strong class="text-slate-900 dark:text-white">Prof. Roșca Bogdan</strong> · Pregătire Matematică Titularizare &amp; Definitivat Învățători
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Relații și detalii: <strong class="text-slate-900 dark:text-white">0771250671</strong></span>
+        <span>·</span>
+        <span>© 2026 Toate drepturile rezervate</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL PREVIEW -->
+  <div id="detailModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/70 backdrop-blur-sm p-4">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl space-y-4">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <span id="modalBadge" class="inline-block px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-900/60 dark:text-indigo-300"></span>
+          <h3 id="modalTitle" class="text-xl font-extrabold text-slate-900 dark:text-white mt-1"></h3>
+        </div>
+        <button onclick="closeModal()" class="p-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold">✕</button>
+      </div>
+      <p id="modalDesc" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
+      <div id="modalTopics" class="bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl p-4 text-xs sm:text-sm space-y-1.5"></div>
+      <div class="flex items-center justify-between pt-2">
+        <span id="modalPrice" class="text-lg font-extrabold text-emerald-600 dark:text-emerald-400"></span>
+        <div class="flex gap-2">
+          <button onclick="closeModal()" class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-sm font-semibold">Închide</button>
+          <a id="modalOrderBtn" href="#cursanti" onclick="closeModal()" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold">Comandă acum</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const PHONE_NUMBER = '0771250671';
+    const WA_NUMBER = '40771250671';
+
+    const PRESENTATIONS = [
+      { id: 1, category: 'aritmetica', title: 'Mulțimea numerelor naturale. Scriere, comparare, operații', slides: 32, desc: 'Structura sistemului zecimal, proprietățile operațiilor, ordinea efectuării operațiilor și probleme tip examen.', topics: ['Scrierea în baza 10', 'Puterea cu exponent natural', 'Teorema împărțirii cu rest'] },
+      { id: 2, category: 'aritmetica', title: 'Divizibilitatea în N. Criterii, CMMDC și CMMMC', slides: 28, desc: 'Criterii de divizibilitate, numere prime și compuse, descompunerea în factori primi și aplicații.', topics: ['Criteriile cu 2, 3, 5, 9, 10', 'Algoritmul lui Euclid', 'Probleme cu CMMDC și CMMMC'] },
+      { id: 3, category: 'aritmetica', title: 'Metoda figurativă (grafică) — sume, diferențe, rapoarte', slides: 36, desc: 'Reprezentarea prin segmente pentru toate tipurile de probleme din programa de titularizare.', topics: ['Sumă și diferență', 'Sumă/diferență și cât', 'Transfer între două mărimi'] },
+      { id: 4, category: 'aritmetica', title: 'Metoda comparației (reducerea la aceeași mărime)', slides: 26, desc: 'Eliminarea unei necunoscute prin egalarea termenilor sau prin înlocuire logică.', topics: ['Egalarea cantităților', 'Înlocuirea unei mărimi', 'Modele rezolvate pas cu pas'] },
+      { id: 5, category: 'aritmetica', title: 'Metoda mersului invers cu reprezentare grafică', slides: 25, desc: 'Reconstituirea valorii inițiale pornind de la rezultatul final prin operații inverse.', topics: ['Lanțuri de operații', 'Probleme cu resturi succesive', 'Verificarea soluției'] },
+      { id: 6, category: 'aritmetica', title: 'Metoda falsei ipoteze', slides: 24, desc: 'Formularea ipotezei, calculul diferenței totale și determinarea diferenței unitare.', topics: ['Probleme clasice cu două tipuri de obiecte', 'Punctaje la concursuri', 'Interpretarea corectă a restului'] },
+      { id: 7, category: 'aritmetica', title: 'Fracții ordinare și fracții zecimale', slides: 38, desc: 'Clasificare, amplificare, simplificare, transformări și operații combinate.', topics: ['Fracții echivalente și ireductibile', 'Fracții zecimale finite și periodice', 'Aflarea unei fracții dintr-un număr'] },
+      { id: 8, category: 'aritmetica', title: 'Rapoarte, proporții și procente', slides: 30, desc: 'Proprietatea fundamentală a proporțiilor, mărimi direct și invers proporționale, regula de trei simplă.', topics: ['Șir de rapoarte egale', 'Scumpiri și ieftiniri succesive', 'Probleme cu concentrații și aliaje'] },
+      { id: 9, category: 'aritmetica', title: 'Unități de măsură și transformări', slides: 22, desc: 'Lungime, arie, volum, capacitate, masă și timp — tabele de conversie și probleme practice.', topics: ['Multipli și submultipli', 'Transformări pentru arii și volume', 'Calcule cu ore, minute și secunde'] },
+      { id: 10, category: 'algebra', title: 'Mulțimea numerelor întregi (Z)', slides: 29, desc: 'Modulul unui număr întreg, ordonarea și regulile semnelor la toate operațiile.', topics: ['Valoarea absolută (modulul)', 'Adunarea, scăderea, înmulțirea, împărțirea', 'Ecuații în Z'] },
+      { id: 11, category: 'algebra', title: 'Mulțimea numerelor raționale (Q) și reale (R)', slides: 34, desc: 'Calcul algebric cu radicali, raționalizarea numitorilor, intervale de numere reale.', topics: ['Scoaterea și introducerea sub radical', 'Media aritmetică și geometrică', 'Operații cu intervale'] },
+      { id: 12, category: 'algebra', title: 'Calcul algebric și formule de calcul prescurtat', slides: 31, desc: 'Operații cu expresii algebrice, factor comun și descompuneri în factori.', topics: ['(a ± b)² și a² - b²', 'Gruparea termenilor', 'Simplificarea fracțiilor algebrice'] },
+      { id: 13, category: 'algebra', title: 'Ecuații de gradul I și sisteme de două ecuații', slides: 35, desc: 'Metode de rezolvare (substituție, reducere) și transpunerea problemelor în ecuații.', topics: ['Discuția soluțiilor ecuației ax + b = 0', 'Sisteme liniare cu două necunoscute', 'Probleme care se rezolvă cu ajutorul sistemelor'] },
+      { id: 14, category: 'algebra', title: 'Inecuații de gradul I în R', slides: 24, desc: 'Proprietățile inegalităților, rezolvarea inecuațiilor și reprezentarea soluțiilor pe axă.', topics: ['Înmulțirea cu numere negative', 'Sisteme de inecuații', 'Soluții întregi într-un interval'] },
+      { id: 15, category: 'algebra', title: 'Funcții. Funcția liniară (f(x) = ax + b)', slides: 33, desc: 'Reprezentarea grafică, intersecția cu axele de coordonate și monotonia funcției.', topics: ['Domeniu, codomeniu, grafic', 'Intersecția graficelor a două funcții', 'Arii formate de grafic cu axele'] },
+      { id: 16, category: 'geometrie', title: 'Unghiuri și drepte paralele tăiate de o secantă', slides: 27, desc: 'Clasificarea unghiurilor, bisectoare, drepte perpendiculare și criterii de paralelism.', topics: ['Unghiuri suplementare și complementare', 'Alterne interne / corespondente', 'Calculul măsurilor de unghiuri'] },
+      { id: 17, category: 'geometrie', title: 'Triunghiul. Linii importante și congruență', slides: 37, desc: 'Suma unghiurilor, mediana, bisectoarea, înălțimea, mediatoarea și triunghiurile particulare.', topics: ['Triunghiul isoscel și echilateral', 'Cazurile de congruență', 'Proprietatea unghiului de 30°'] },
+      { id: 18, category: 'geometrie', title: 'Asemănarea triunghiurilor și Teorema lui Thales', slides: 30, desc: 'Rapoarte de segmente, teorema fundamentală a asemănării și aplicații în calculul lungimilor.', topics: ['Teorema lui Thales și reciproca', 'Cazurile de asemănare', 'Raportul ariilor triunghiurilor asemenea'] },
+      { id: 19, category: 'geometrie', title: 'Relații metrice în triunghiul dreptunghic', slides: 32, desc: 'Teorema lui Pitagora, teorema înălțimii, teorema catetei și elemente de trigonometrie.', topics: ['Teorema lui Pitagora și reciproca', 'Sin, cos, tg, ctg pentru 30°, 45°, 60°', 'Calculul elementelor într-un triunghi'] },
+      { id: 20, category: 'geometrie', title: 'Patrulatere convexe. Arii și perimetre', slides: 35, desc: 'Paralelogram, dreptunghi, romb, pătrat și trapez — proprietăți și formule de arie.', topics: ['Linia mijlocie în trapez', 'Formule de arie pentru toate patrulaterele', 'Probleme combinate'] },
+      { id: 21, category: 'geometrie', title: 'Cercul și corpuri geometrice (Cub, Paralelipiped, Prismă, Piramidă)', slides: 34, desc: 'Lungimea cercului, aria discului, arii laterale, totale și volume ale poliedrelor.', topics: ['Unghi la centru și unghi înscris', 'Desfășurarea corpurilor', 'Aria laterală, aria totală și volumul'] }
+    ];
+
+    const BOOKS = [
+      {
+        id: 'teste-2025',
+        badge: 'Volumul 1 · 2025',
+        title: 'Teste rezolvate de matematică – Titularizare învățători',
+        author: 'Prof. Roșca Bogdan',
+        price: '150 lei',
+        highlights: [
+          '80 de teste complete structurate după modelul oficial de examen',
+          'Rezolvări integrale, explicate pas cu pas, cu metode figurative și algebrice',
+          'Strict Matematică (fără metodică, fără teste grilă)',
+          'Format clar, ușor de urmărit pentru autoevaluare și lucru zilnic'
+        ],
+        desc: 'Culegere concepută special pentru candidații la examenul de titularizare în învățământul primar, oferind antrenament complet pe toate tipurile de subiecte.'
+      },
+      {
+        id: 'algebra-2026',
+        badge: 'Volumul 2 · 2026',
+        title: 'Algebră pentru titularizare învățători',
+        author: 'Prof. Roșca Bogdan',
+        price: '150 lei',
+        highlights: [
+          'Teorie sintetizată clar pe toate capitolele de algebră din programă',
+          'Exemple rezolvate model înaintea fiecărui set de exerciții',
+          'Exerciții și probleme gradate ca dificultate, cu soluții complete',
+          'Ideală atât pentru reluarea noțiunilor de bază, cât și pentru aprofundare'
+        ],
+        desc: 'Ghid complet de algebră dedicat pregătirii examenului de titularizare, gândit pentru fixarea rapidă a formulelor, ecuațiilor, sistemelor și funcțiilor.'
+      }
+    ];
+
+    function categoryLabel(cat) {
+      if (cat === 'aritmetica') return 'Aritmetică';
+      if (cat === 'algebra') return 'Algebră';
+      return 'Geometrie';
+    }
+
+    function renderPresentations() {
+      const grid = document.getElementById('pptGrid');
+      const query = (document.getElementById('pptSearch').value || '').toLowerCase().trim();
+      const filter = document.getElementById('pptFilter').value;
+
+      const filtered = PRESENTATIONS.filter(p => {
+        const matchCat = filter === 'all' || p.category === filter;
+        const matchText = !query || p.title.toLowerCase().includes(query) || p.desc.toLowerCase().includes(query);
+        return matchCat && matchText;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `<div class="col-span-full text-center py-10 text-slate-500 dark:text-slate-400">Nu a fost găsită nicio prezentare pentru filtrul selectat.</div>`;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => `
+        <article class="rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-4">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between gap-2">
+              <span class="px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-300">
+                #${p.id} · ${categoryLabel(p.category)}
+              </span>
+              <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">${p.slides} slide-uri</span>
+            </div>
+            <h3 class="font-extrabold text-base text-slate-900 dark:text-white leading-snug">${p.title}</h3>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 line-clamp-2">${p.desc}</p>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-2">
+            <span class="font-extrabold text-emerald-600 dark:text-emerald-400 text-base">3€</span>
+            <div class="flex items-center gap-2">
+              <button onclick="openPptModal(${p.id})" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-xs font-bold hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                Cuprins
+              </button>
+              <a href="#cursanti" onclick="prefillSubject('Comandă Prezentare PPT #${p.id}: ${p.title.replace(/'/g, '')} (3€)')" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition">
+                Comandă
+              </a>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderBooks() {
+      const grid = document.getElementById('booksGrid');
+      grid.innerHTML = BOOKS.map(b => `
+        <article class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm flex flex-col justify-between">
+          <div class="p-6 sm:p-8 space-y-4">
+            <div class="flex items-center justify-between gap-3">
+              <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-900 dark:bg-amber-900/50 dark:text-amber-300">
+                ${b.badge}
+              </span>
+              <span class="text-xl font-extrabold text-emerald-600 dark:text-emerald-400">${b.price}</span>
+            </div>
+
+            <div class="rounded-2xl bg-gradient-to-br from-indigo-950 via-slate-900 to-indigo-900 text-white p-6 border border-indigo-700/40 shadow-inner">
+              <div class="text-xs uppercase tracking-widest text-amber-300 font-bold">Colecția Titularizare Învățători</div>
+              <div class="text-lg sm:text-xl font-extrabold mt-2 leading-snug">${b.title}</div>
+              <div class="text-xs text-slate-300 mt-3 font-semibold">Autor: ${b.author} · Tel. 0771250671</div>
+            </div>
+
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">${b.desc}</p>
+
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-700 dark:text-slate-200">
+              ${b.highlights.map(h => `<li class="flex items-start gap-2"><span class="text-emerald-500 font-bold">✓</span><span>${h}</span></li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="px-6 sm:px-8 py-4 bg-slate-50 dark:bg-slate-950/60 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
+            <span class="text-xs text-slate-500 dark:text-slate-400">Livrare prin curier oriunde în țară</span>
+            <a href="#cursanti" onclick="prefillSubject('Comandă Culegere: ${b.title} (${b.price})')" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm transition">
+              Comandă culegerea
+            </a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function openPptModal(id) {
+      const p = PRESENTATIONS.find(item => item.id === id);
+      if (!p) return;
+      document.getElementById('modalBadge').textContent = `Prezentare PPT #${p.id} · ${categoryLabel(p.category)} (${p.slides} slide-uri)`;
+      document.getElementById('modalTitle').textContent = p.title;
+      document.getElementById('modalDesc').textContent = p.desc;
+      document.getElementById('modalTopics').innerHTML = `
+        <div class="font-bold text-slate-800 dark:text-slate-200 mb-1">Ce conține prezentarea:</div>
+        ${p.topics.map(t => `<div>• ${t}</div>`).join('')}
+      `;
+      document.getElementById('modalPrice').textContent = 'Preț: 3€';
+      document.getElementById('modalOrderBtn').onclick = function() {
+        prefillSubject(`Comandă Prezentare PPT #${p.id}: ${p.title} (3€)`);
+        closeModal();
+      };
+      const modal = document.getElementById('detailModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('detailModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function prefillSubject(text) {
+      const input = document.getElementById('studentInterest');
+      if (input) {
+        input.value = text;
+        input.focus();
+      }
+    }
+
+    function orderAllPpts() {
+      prefillSubject('Comandă Pachet Complet 21 Prezentări PPT (preț promoțional)');
+      document.getElementById('cursanti').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function submitEnrollment(e) {
+      e.preventDefault();
+      const name = document.getElementById('studentName').value.trim();
+      const phone = document.getElementById('studentPhone').value.trim();
+      const exam = document.getElementById('studentExam').value;
+      const interest = document.getElementById('studentInterest').value.trim();
+      const notes = document.getElementById('studentNotes').value.trim();
+
+      const msg = [
+        `Bună ziua, domnule Prof. Roșca Bogdan!`,
+        `Nume: ${name}`,
+        `Telefon: ${phone}`,
+        `Examen: ${exam}`,
+        `Solicitare: ${interest}`,
+        notes ? `Detalii: ${notes}` : ''
+      ].filter(Boolean).join('\n');
+
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    function requestFreeSession() {
+      const msg = 'Bună ziua, domnule Prof. Roșca Bogdan! Doresc linkul de acces pentru următoarea sesiune gratuită de Matematică (Titularizare / Definitivat).';
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    function copyPhone() {
+      navigator.clipboard.writeText(PHONE_NUMBER).then(() => {
+        const badge = document.getElementById('copyBadge');
+        if (badge) {
+          badge.textContent = 'Copiat!';
+          setTimeout(() => { badge.textContent = 'Copiază'; }, 2000);
+        }
+      });
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.classList.toggle('dark');
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      document.getElementById('themeIcon').textContent = isDark ? '☀️' : '🌙';
+    }
+
+    (function init() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+        document.getElementById('themeIcon').textContent = '☀️';
+      }
+      renderPresentations();
+      renderBooks();
+    })();
+  </script>
+</body>
+</html>
